@@ -1,12 +1,24 @@
 import React from "react";
 
+import facebook from "../../../../img/icons/facebook.svg"
+import home from "../../../../img/icons/home.svg"
+import flag from "../../../../img/icons/flag.svg"
+import tv from "../../../../img/icons/tv.svg"
+import users from "../../../../img/icons/users.svg"
+import calendar from "../../../../img/icons/calendar.svg"
+import avatar4 from "../../../../img/avatar/4.jpg"
+import plus from "../../../../img/icons/plus.svg"
+import messenger from "../../../../img/icons/messenger.svg"
+import bell from "../../../../img/icons/bell.svg"
+import arrow from "../../../../img/icons/arrow.svg"
+
 export default function Navbar() {
   return (
     <div className="navbar">
       <nav>
         <div className="left-side">
           <div className="logo">
-            <img  src="../../img/icons/facebook.svg" alt="" />
+            <img  src={facebook} alt="" />
           </div>
 
           <div className="search">
@@ -17,31 +29,31 @@ export default function Navbar() {
         <div className="tabs">
           <div className="tab-icon active">
             <div className="icon">
-              <img  src="../../img/icons/home.svg" alt="" />
+              <img  src={home} alt="" />
             </div>
           </div>
 
           <div className="tab-icon">
             <div className="icon has-notification">
-              <img  src="../../img/icons/flag.svg" alt="" />
+              <img  src={flag} alt="" />
             </div>
           </div>
 
           <div className="tab-icon">
             <div className="icon">
-              <img  src="../../img/icons/tv.svg" alt="" />
+              <img  src={tv} alt="" />
             </div>
           </div>
 
           <div className="tab-icon">
             <div className="icon">
-              <img  src="../../img/icons/users.svg" alt="" />
+              <img  src={users} alt="" />
             </div>
           </div>
 
           <div className="tab-icon">
             <div className="icon has-notification">
-              <img  src="../../img/icons/calendar.svg" alt="" />
+              <img  src={calendar} alt="" />
             </div>
           </div>
         </div>
@@ -49,26 +61,26 @@ export default function Navbar() {
         <div className="right-side">
           <div className="user">
             <div className="profile">
-              <img  src="../../img/avatar/4.jpg" alt="" />
+              <img  src={avatar4} alt="" />
             </div>
             <h4>Anne</h4>
           </div>
 
           <div className="user-icons">
             <div className="icon">
-              <img  src="../../img/icons/plus.svg" alt="" />
+              <img  src={plus} alt="" />
             </div>
 
             <div className="icon has-notification">
-              <img  src="../../ img/icons/messenger.svg" alt="" />
+              <img  src={messenger} alt="" />
             </div>
 
             <div className="icon">
-              <img  src="../../img/icons/bell.svg" alt="" />
+              <img  src={bell} alt="" />
             </div>
 
             <div className="icon">
-              <img  src="../../img/icons/arrow.svg" alt="" />
+              <img  src={arrow} alt="" />
             </div>
           </div>
         </div>

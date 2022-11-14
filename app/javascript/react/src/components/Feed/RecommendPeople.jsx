@@ -1,4 +1,8 @@
 import React from "react";
+import avatar1 from "../../../../img/avatar/1.jpg"
+import avatar4 from "../../../../img/avatar/4.jpg"
+import avatar3 from "../../../../img/avatar/3.jpg"
+import avatar2 from "../../../../img/avatar/2.jpg"
 
 export default function RecommendPeople() {
   return (
@@ -15,7 +19,7 @@ export default function RecommendPeople() {
           <div className="item">
             <div className="person-img">
               <div className="icon">&times;</div>
-              <img src="../../img/avatar/1.jpg" alt="" />
+              <img src={avatar1} alt="" />
             </div>
 
             <div className="info">
@@ -28,7 +32,7 @@ export default function RecommendPeople() {
           <div className="item">
             <div className="person-img">
               <div className="icon">&times;</div>
-              <img src="../../img/avatar/4.jpg" alt="" />
+              <img src={avatar4} alt="" />
             </div>
 
             <div className="info">
@@ -41,7 +45,7 @@ export default function RecommendPeople() {
           <div className="item">
             <div className="person-img">
               <div className="icon">&times;</div>
-              <img src="../../img/avatar/3.jpg" alt="" />
+              <img src={avatar3} alt="" />
             </div>
 
             <div className="info">
@@ -54,7 +58,7 @@ export default function RecommendPeople() {
           <div className="item">
             <div className="person-img">
               <div className="icon">&times;</div>
-              <img src="../../img/avatar/2.jpg" alt="" />
+              <img src={avatar2} alt="" />
             </div>
 
             <div className="info">

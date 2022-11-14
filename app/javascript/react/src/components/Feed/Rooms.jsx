@@ -1,12 +1,19 @@
 import React from "react";
 
+import videoRoom from "../../../../img/icons/video-room.svg"
+import hero from "../../../../img/avatar/hero.png"
+import avatar1 from "../../../../img/avatar/1.jpg"
+import avatar3 from "../../../../img/avatar/3.jpg"
+import avatar4 from "../../../../img/avatar/4.jpg"
+import avatar2 from "../../../../img/avatar/2.jpg"
+import avatar5 from "../../../../img/avatar/5.jpg"
 export default function Rooms() {
   return (
     <div className="rooms create-post view smaller-margin">
       <div className="upper">
         <div className="title">
           <div className="icon">
-            <img src="../../img/icons/video-room.svg" alt="" />
+            <img src={videoRoom} alt="" />
           </div>
           <span>Rooms</span>
         </div>
@@ -16,7 +23,7 @@ export default function Rooms() {
         <div className="item">
           <div className="user">
             <div className="profile">
-              <img src="../../img/avatar/hero.png" alt="" />
+              <img src={hero} alt="" />
             </div>
           </div>
         </div>
@@ -24,7 +31,7 @@ export default function Rooms() {
         <div className="item">
           <div className="user">
             <div className="profile">
-              <img src="../../img/avatar/1.jpg" alt="" />
+              <img src={avatar1} alt="" />
             </div>
           </div>
         </div>
@@ -32,7 +39,7 @@ export default function Rooms() {
         <div className="item">
           <div className="user">
             <div className="profile">
-              <img src="../../img/avatar/3.jpg" alt="" />
+              <img src={avatar3} alt="" />
             </div>
           </div>
         </div>
@@ -40,7 +47,7 @@ export default function Rooms() {
         <div className="item">
           <div className="user">
             <div className="profile">
-              <img src="../../img/avatar/4.jpg" alt="" />
+              <img src={avatar4} alt="" />
             </div>
           </div>
         </div>
@@ -48,7 +55,7 @@ export default function Rooms() {
         <div className="item">
           <div className="user">
             <div className="profile">
-              <img src="../../img/avatar/2.jpg" alt="" />
+              <img src={avatar2} alt="" />
             </div>
           </div>
         </div>
@@ -56,7 +63,7 @@ export default function Rooms() {
         <div className="item">
           <div className="user">
             <div className="profile">
-              <img src="../../img/avatar/4.jpg" alt="" />
+              <img src={avatar4} alt="" />
             </div>
           </div>
         </div>
@@ -64,7 +71,7 @@ export default function Rooms() {
         <div className="item">
           <div className="user">
             <div className="profile">
-              <img src="../../img/avatar/5.jpg" alt="" />
+              <img src={avatar5} alt="" />
             </div>
           </div>
         </div>
