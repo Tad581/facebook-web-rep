@@ -189,7 +189,7 @@ nav .left-side .search::before {
     height: 12px;
     width: 12px;
     padding: 2px;
-    /* background-image: url('../img/icons/search.svg'); */
+    background-image: url('../../../img/icons/search.svg');
     background-size: contain;
     position: absolute;
     left: 12px;

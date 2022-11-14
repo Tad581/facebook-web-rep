@@ -8,7 +8,7 @@ import share from "../../../../img/icons/share.svg";
 import camera from "../../../../img/icons/camera.svg";
 import image from "../../../../img/icons/image.svg";
 import smile2 from "../../../../img/icons/smile-2.svg";
-
+import hero from "../../../../img/avatar/hero.png"
 export default function Post() {
   return (
     <div className="posts">
@@ -67,7 +67,7 @@ export default function Post() {
           <div className="write-comment">
             <div className="user">
               <div className="profile">
-                <img src="../../img/avatar/hero.png" alt="" />
+                <img src={hero} alt="" />
               </div>
             </div>
             <div className="input">

@@ -1,5 +1,18 @@
 import React from "react";
 
+import hero from "../../../../img/avatar/hero.png"
+import shield from "../../../../img/icons/shield.svg"
+import colorPeople from "../../../../img/icons/colored-people.svg"
+import colorMessenger from "../../../../img/icons/colored-messenger.svg"
+import colorFlag from "../../../../img/icons/colored-flag.svg"
+import arrowDown from "../../../../img/icons/arrow-down.svg"
+import st1 from "../../../../img/stories/st-1.jpeg"
+import st2 from "../../../../img/stories/st-2.jpeg"
+import page1 from "../../../../img/stories/page-1.jpg"
+import st3 from "../../../../img/stories/st-3.jpeg"
+import page2 from "../../../../img/stories/page-2.jpg"
+import page3 from "../../../../img/stories/page-3.jpeg"
+
 export default function ApplicationBar() {
   return (
     <div className="application-bar">
@@ -9,7 +22,7 @@ export default function ApplicationBar() {
             <div className="menu-item">
               <div className="user">
                 <div className="profile">
-                  <img src="../../img/avatar/hero.png" alt="" />
+                  <img src={hero} alt="" />
                 </div>
                 <h4>Anne</h4>
               </div>
@@ -18,7 +31,7 @@ export default function ApplicationBar() {
             <div className="menu-item">
               <div className="item-row">
                 <div className="icon">
-                  <img src="../../img/icons/shield.svg" alt="" />
+                  <img src={shield} alt="" />
                 </div>
                 <h4>COVID-19 Infromation Center </h4>
               </div>
@@ -27,7 +40,7 @@ export default function ApplicationBar() {
             <div className="menu-item">
               <div className="item-row">
                 <div className="icon">
-                  <img src="../../img/icons/colored-people.svg" alt="" />
+                  <img src={colorPeople} alt="" />
                 </div>
                 <h4>Friends </h4>
               </div>
@@ -36,7 +49,7 @@ export default function ApplicationBar() {
             <div className="menu-item">
               <div className="item-row">
                 <div className="icon">
-                  <img src="../../img/icons/colored-messenger.svg" alt="" />
+                  <img src={colorMessenger} alt="" />
                 </div>
                 <h4>Messenger </h4>
               </div>
@@ -45,7 +58,7 @@ export default function ApplicationBar() {
             <div className="menu-item">
               <div className="item-row">
                 <div className="icon">
-                  <img src="../../img/icons/colored-flag.svg" alt="" />
+                  <img src={colorFlag} alt="" />
                 </div>
                 <h4>Pages </h4>
               </div>
@@ -54,7 +67,7 @@ export default function ApplicationBar() {
             <div className="menu-item">
               <div className="item-row  border">
                 <div className="icon more">
-                  <img src="../../img/icons/arrow-down.svg" alt="" />
+                  <img src={arrowDown} alt="" />
                 </div>
                 <h4>see more </h4>
               </div>
@@ -65,7 +78,7 @@ export default function ApplicationBar() {
             <div className="menu-item">
               <div className="item-row">
                 <div className="icon">
-                  <img src="../../img/stories/st-1.jpeg" alt="" />
+                  <img src={st1} alt="" />
                 </div>
                 <h4>Designers house </h4>
               </div>
@@ -74,14 +87,14 @@ export default function ApplicationBar() {
             <div className="menu-item">
               <div className="item-row">
                 <div className="icon">
-                  <img src="../../img/stories/st-2.jpeg" alt="" />
+                  <img src={st2} alt="" />
                 </div>
                 <h4>Script house </h4>
               </div>
               <div className="menu-item">
                 <div className="item-row">
                   <div className="icon">
-                    <img src="../../img/stories/page-1.jpg" alt="" />
+                    <img src={page1} alt="" />
                   </div>
                   <h4>ui ux Designers workshop </h4>
                 </div>
@@ -90,7 +103,7 @@ export default function ApplicationBar() {
               <div className="menu-item">
                 <div className="item-row">
                   <div className="icon">
-                    <img src="../../img/stories/st-3.jpeg" alt="" />
+                    <img src={st3} alt="" />
                   </div>
                   <h4>netflix movies recommends </h4>
                 </div>
@@ -99,16 +112,16 @@ export default function ApplicationBar() {
               <div className="menu-item">
                 <div className="item-row">
                   <div className="icon">
-                    <img src="../../img/stories/page-2.jpg" alt="" />
+                    <img src={page2} alt="" />
                   </div>
-                  <h4>the futur </h4>
+                  <h4>the future </h4>
                 </div>
               </div>
 
               <div className="menu-item">
                 <div className="item-row">
                   <div className="icon">
-                    <img src="../../img/stories/page-3.jpeg" alt="" />
+                    <img src={page3} alt="" />
                   </div>
                   <h4>aj smart </h4>
                 </div>

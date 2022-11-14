@@ -16,7 +16,6 @@ import avatar6 from "../../../../img/avatar/6.jpg"
 
 export default function Story() {
   return (
-    <div className="story posts">
       <div className="stories">
         <div className="owl-controls">
           <div className="owl-nav">
@@ -111,6 +110,5 @@ export default function Story() {
           </div>
         </div>
       </div>
-    </div>
   );
 }

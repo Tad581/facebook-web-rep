@@ -7,7 +7,7 @@ import RecommendPeople from "./RecommendPeople";
 
 export default function Feed() {
   return (
-    <div className="feed">
+    <div className="posts">
       <Story />
       <CreatePost />
       <Rooms />
