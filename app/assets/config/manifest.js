@@ -1,2 +1,5 @@
 //= link_tree ../images
-//= link_tree ../builds
+//= link application.css
+//= link index.js
+//= link jquery.js
+//= link owlCarrousel.js

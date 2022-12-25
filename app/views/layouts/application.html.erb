@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Xin cái tuổi facebook</title>
+    <title>Facebook</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <%= favicon_link_tag 'https://www.linkpicture.com/q/facebook_36.png' %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag('index.js') %>
+    <%= javascript_include_tag('jquery.js') %>
+    <%= javascript_include_tag('owlCarrousel.js') %>
   </head>
-
   <body>
+    <% if notice %>
+      <%= render 'layouts/arlerts'%>
+    <% end %>
     <%= yield %>
   </body>
 </html>
