@@ -7,6 +7,17 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def search
+    @parameters = params[:query].downcase
+    if !@parameters.blank?
+      @search_user = User.all.where("id <> #{current_user.id} and lower(nickname) LIKE '%#{@parameters}%'")
+      @search_user.each do |user|
+      end
+    else
+      @search_user = User.all
+    end
+  end
+
   # GET /posts/1 or /posts/1.json
   def show
   end
@@ -26,7 +37,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to post_url(@post), notice: "Post was successfully created." }
+        format.html { redirect_to posts_path, notice: "Post was successfully created." }
         format.json { render :index, status: :created, location: @post }
       else
         format.html { render :new, status: :unprocessable_entity }
