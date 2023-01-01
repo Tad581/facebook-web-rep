@@ -18,10 +18,15 @@
     <div class="logo">
       <%= image_tag 'icons/facebook.svg', alt: "" %>
     </div>
-    <div class="search">
+    <%# <div class="search">
       <input type="text" placeholder="Tìm kiếm" name="" id="">
-    </div>
-
+    </div> %>
+    <%= form_with url: search_path, method: :get do |form| %>
+      <div class="search">
+        <%= form.text_field :query %>
+        <%= form.submit "Search"%>
+      </div>
+    <%end%>
   </div>
   <div class="btn-group">
   </div>
@@ -57,7 +62,7 @@
   <div class="right-side">
     <div class="user">
       <div class="profile">
-        <%= image_tag 'avatar/4.jpg', alt: ""%>
+        <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
       </div>
       <h4><%= current_user.nickname %></h4>
     </div>
@@ -86,7 +91,7 @@
       <div class="menu-item">
         <div class="user">
           <div class="profile">
-            <%= image_tag 'avatar/hero.png', alt: ""%>
+            <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
           </div>
           <h4><%= current_user.nickname %></h4>
         </div>
@@ -194,7 +199,7 @@
         <div class="input">
           <div class="user">
             <div class="profile">
-              <%= image_tag 'avatar/hero.png', alt: ""%>
+              <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
             </div>
           </div>
           <%= link_to 'Bạn đang nghĩ gì', new_post_path, class: "open-post-link"%>
@@ -231,7 +236,7 @@
                 <div class="d-flex">
                   <div class="user">
                     <div class="profile">
-                      <%= image_tag 'avatar/5.jpg', alt: ""%>
+                      <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
                     </div>
                   </div>
                   <div class="info">
@@ -277,7 +282,7 @@
               <div class="write-comment">
                 <div class="user">
                   <div class="profile">
-                    <%= image_tag 'avatar/hero.png', alt: ""%>
+                    <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
                   </div>
                 </div>
                 <div class="input">
@@ -352,61 +357,61 @@
         </h6>
         <div class="user">
           <div class="profile">
-            <%= image_tag 'avatar/1.jpg', alt: ""%>
+            <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
           </div>
           <h4>diana berry</h4>
         </div>
         <div class="user">
           <div class="profile">
-            <%= image_tag 'avatar/4.jpg', alt: ""%>
+            <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
           </div>
           <h4>rosie pie</h4>
         </div>
         <div class="user">
           <div class="profile">
-            <%= image_tag 'avatar/2.jpg', alt: ""%>
+            <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
           </div>
           <h4>samantha jones</h4>
         </div>
         <div class="user">
           <div class="profile">
-            <%= image_tag 'avatar/3.jpg', alt: ""%>
+            <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
           </div>
           <h4>john doe</h4>
         </div>
         <div class="user">
           <div class="profile">
-            <%= image_tag 'avatar/4.jpg', alt: ""%>
+            <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
           </div>
           <h4>stacy jr.</h4>
         </div>
         <div class="user">
           <div class="profile">
-            <%= image_tag 'avatar/5.jpg', alt: ""%>
+            <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
           </div>
           <h4>christin sam</h4>
         </div>
         <div class="user">
           <div class="profile">
-            <%= image_tag 'avatar/6.jpg', alt: ""%>
+            <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
           </div>
           <h4>kate simon</h4>
         </div>
         <div class="user">
           <div class="profile">
-            <%= image_tag 'avatar/1.jpg', alt: ""%>
+            <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
           </div>
           <h4>diana berry</h4>
         </div>
         <div class="user">
           <div class="profile">
-            <%= image_tag 'avatar/2.jpg', alt: ""%>
+            <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
           </div>
           <h4>sarah cerny</h4>
         </div>
         <div class="user">
           <div class="profile">
-            <%= image_tag 'avatar/3.jpg', alt: ""%>
+            <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
           </div>
           <h4>josh doe</h4>
         </div>

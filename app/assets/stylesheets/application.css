@@ -169,6 +169,8 @@ nav .left-side .search {
   background-color: var(--lighter);
   margin-left: 10px;
   padding-left: 22px;
+  display: flex;
+  flex-direction: row;
 }
 
 nav .left-side .search input {
@@ -179,7 +181,6 @@ nav .left-side .search input {
   color: var(--placeholder);
   font-size: 0.8rem;
   font-family: Poppins, sans-serif;
-  pointer-events: none;
 }
 
 nav .left-side .search::before {
