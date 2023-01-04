@@ -1,6 +1,11 @@
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
+<div class="alert alert-warning alert-dismissible fade show" role="alert" id="alert-message">
   <%= notice %>
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
 </div>
+
+<script>
+  setTimeout(() => {
+    alertMess = document.getElementById("alert-message");
+    alertMess.style.display = "none"
+    // alertMess.style.display = "block"
+  }, 2000)
+</script>

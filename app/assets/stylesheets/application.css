@@ -3,16 +3,16 @@
 
 /*  variables and defaul css */
 :root {
-  --primary: rgb(3, 29, 46);
-  --accent: rgb(7, 42, 65);
-  --lighter: rgb(26, 68, 100);
+  --primary: #18191a;
+  --accent: #282828;
+  --lighter: #4A4A4A;
   --blue: rgb(29, 63, 214);
   --font: rgb(206, 206, 206);
   --placeholder: rgb(219, 219, 219);
   --notification: #ff4d4d;
   --green: rgb(19, 209, 19);
   --border: #5aa1ff;
-  --border-bottom: #043474;
+  --border-bottom: #828282;
   --white: #fff;
 }
 
@@ -37,6 +37,10 @@ input {
 
 a {
   text-decoration: none !important;
+}
+
+a:hover {
+  color: white !important;
 }
 
 ::-webkit-input-placeholder {
@@ -131,6 +135,13 @@ h6.title {
 }
 
 /* layout & content */
+.app-container {
+  height: auto;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 /* nav */
 nav {
@@ -138,10 +149,12 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
-  position: relative;
+  top: 0;
+  position: sticky;
   background-color: var(--accent);
-  border-bottom: 2px solid var(--border-bottom);
+  border-bottom: 1px solid var(--border-bottom);
   height: auto;
+  z-index: 9999;
 }
 
 nav .left-side {
@@ -156,11 +169,25 @@ nav .left-side .logo {
   border-radius: 50%;
 }
 
+.refresh {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  height: 45px !important;
+  width: 45px !important;
+  color: transparent;
+}
+
+.refresh:hover {
+  color: transparent !important;
+}
+
 nav .left-side .logo img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
+
 
 nav .left-side .search {
   border-radius: 100px;
@@ -311,6 +338,8 @@ nav .right-side .user-icons .icon.has-notification::after {
 }
 
 .wrapper .shortcuts {
+  position: sticky;
+  top: 95px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -515,7 +544,6 @@ nav .right-side .user-icons .icon.has-notification::after {
 
 .posts .create-post,
 .posts .view {
-  margin-top: 50px;
   background-color: var(--accent);
   padding: 20px 20px 0 20px;
   border-radius: 10px;
@@ -532,7 +560,8 @@ nav .right-side .user-icons .icon.has-notification::after {
   align-items: center;
 }
 
-.posts .create-post .input input, .open-post-link {
+.posts .create-post .input input,
+.open-post-link {
   background-color: var(--lighter);
   border: none;
   border-radius: 100px;
@@ -782,7 +811,7 @@ nav .right-side .user-icons .icon.has-notification::after {
   width: 100%;
   background-color: var(--lighter);
   border-radius: 100px;
-  padding: 12px;
+  /* padding: 12px; */
   margin: 10px 0 0 10px;
 }
 
@@ -1335,6 +1364,9 @@ Custom
   border: 0px !important;
 }
 
+#error_explanation {
+  color: red;
+}
 
 /*=======================
 Create Post
