@@ -230,7 +230,7 @@
                     </div>
                     <div class="info">
                       <h6 class="name">
-                        <%= post.user_id %>
+                        <%= current_user.nickname %>
                       </h6>
                       <span class="time">1 hour ago</span>
                     </div>
@@ -268,22 +268,27 @@
                     </span>
                   </div>
                 </div>
-                <div class="write-comment">
-                  <div class="comment-list">
-                    <% @posts.reverse.each do |comment| %>
-                      <% if comment.parent_id == post.id%>
-                        <p><%= comment.content%></p>
+                <div class="comment-list">
+                  <% @posts.reverse.each do |comment| %>
+                    <% if comment.parent_id == post.id%>
+                      <div class="comment-box">
                         <div class="user">
                           <div class="profile">
                             <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
                           </div>
                         </div>
-                        <div class="input">
-                          <%= link_to 'Write your comment ... ', new_post_path(:post => post), class: "open-post-link"%>
+                        <div class="comment-content">
+                          <h4><%= current_user.nickname %></h4>
+                          <p><%= comment.content%></p>
                         </div>
-                      <%end%>
-                    <% end %>
-                  </div>
+                      </div>
+                      <%# <div class="input">
+                        <%= link_to 'Write your comment ... ', new_post_path(:post => comment), class: "open-post-link"%>
+                      <%# </div> %>
+                    <%end%>
+                  <% end %>
+                </div>
+                <div class="write-comment">
                   <div class="user">
                     <div class="profile">
                       <%= image_tag 'avatar/unknown.jpeg', alt: ""%>

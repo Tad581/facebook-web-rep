@@ -5,7 +5,7 @@
 :root {
   --primary: #18191a;
   --accent: #282828;
-  --lighter: #4A4A4A;
+  --lighter: #4a4a4a;
   --blue: rgb(29, 63, 214);
   --font: rgb(206, 206, 206);
   --placeholder: rgb(219, 219, 219);
@@ -161,6 +161,7 @@ nav .left-side {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding-left: 20px;
 }
 
 nav .left-side .logo {
@@ -187,7 +188,6 @@ nav .left-side .logo img {
   width: 100%;
   object-fit: cover;
 }
-
 
 nav .left-side .search {
   border-radius: 100px;
@@ -340,6 +340,7 @@ nav .right-side .user-icons .icon.has-notification::after {
 .wrapper .shortcuts {
   position: sticky;
   top: 95px;
+  padding-left: 20px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -803,16 +804,53 @@ nav .right-side .user-icons .icon.has-notification::after {
 
 .posts .view .view-post .write-comment {
   padding: 10px 0 0 0;
-  border-top: 2px solid var(--border-bottom);
+  /* border-top: 2px solid var(--border-bottom); */
   margin: 10px 0 0 0;
 }
 
-.posts .view .view-post .write-comment .input {
+.posts .view .view-post .write-comment .input,
+.posts .view .view-post .comment-list .comment-content {
   width: 100%;
   background-color: var(--lighter);
   border-radius: 100px;
   /* padding: 12px; */
   margin: 10px 0 0 10px;
+}
+
+.posts .view .view-post .comment-list {
+  margin-top: 20px;
+  border-top: 2px solid var(--border-bottom);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.posts .view .view-post .comment-list .comment-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.posts .view .view-post .comment-list .comment-box .comment-content {
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--lighter);
+  border-radius: 20px;
+  /* padding: 12px; */
+  padding-right: 20px;
+  margin: 10px 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.posts .view .view-post .comment-list .comment-box .comment-content h4,
+.posts .view .view-post .comment-list .comment-box .comment-content p {
+  font-size: 15px;
+  color: var(--white);
+  margin: 8px 0 0 20px;
 }
 
 .posts .view .view-post .write-comment .input input {
