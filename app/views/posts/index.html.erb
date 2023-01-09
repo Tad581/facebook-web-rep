@@ -230,7 +230,7 @@
                     </div>
                     <div class="info">
                       <h6 class="name">
-                        <%= current_user.nickname %>
+                        <%= @nicknameList[@posts.find_index(post)] %>
                       </h6>
                       <span class="time">1 hour ago</span>
                     </div>
@@ -278,7 +278,7 @@
                           </div>
                         </div>
                         <div class="comment-content">
-                          <h4><%= current_user.nickname %></h4>
+                          <h4><%= @nicknameList[@posts.find_index(comment)] %></h4>
                           <p><%= comment.content%></p>
                         </div>
                       </div>

@@ -10,10 +10,245 @@
             <div class="profile">
               <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
             </div>
-            <h4><%= user.nickname %></h4>
+            <h4><%= user.nickname %>
+            </h4>
           </div>
         <% end %>
       </div>
     </div>
   </div>
 </div>
+<div class="app-container">
+  <!--navbar-->
+  <nav>
+    <!--logo and search-->
+    <div class="left-side">
+      <div class="logo">
+        <%= image_tag 'icons/facebook.svg', alt: "" %>
+        <%= link_to "123", root_path, class: "refresh"%>
+      </div>
+      <%# <div class="search">
+      <input type="text" placeholder="Tìm kiếm" name="" id="">
+    </div> %>
+      <%= form_with url: search_path, method: :get do |form| %>
+        <div class="search">
+          <%= form.text_field :query %>
+          <%= form.submit "Search"%>
+        </div>
+      <%end%>
+    </div>
+    <div class="btn-group">
+    </div>
+    <!--tab icons-->
+    <div class="tabs">
+      <div class="tab-icon active">
+        <div class="icon">
+          <%= image_tag 'icons/home.svg', alt: ""%>
+        </div>
+      </div>
+      <div class="tab-icon">
+        <div class="icon has-notification">
+          <%= image_tag 'icons/flag.svg', alt: ""%>
+        </div>
+      </div>
+      <div class="tab-icon">
+        <div class="icon">
+          <%= image_tag 'icons/tv.svg', alt: ""%>
+        </div>
+      </div>
+      <div class="tab-icon">
+        <div class="icon">
+          <%= image_tag 'icons/users.svg', alt: ""%>
+        </div>
+      </div>
+      <div class="tab-icon">
+        <div class="icon has-notification">
+          <%= image_tag 'icons/calendar.svg', alt: ""%>
+        </div>
+      </div>
+    </div>
+    <!--right side-->
+    <div class="right-side">
+      <div class="user">
+        <div class="profile">
+          <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
+        </div>
+        <h4><%= current_user.nickname %></h4>
+      </div>
+      <!--icons-->
+      <div class="user-icons">
+        <div class="icon">
+          <%= image_tag 'icons/plus.svg', alt: ""%>
+        </div>
+        <div class="icon has-notification">
+          <%= image_tag 'icons/messenger.svg', alt: ""%>
+        </div>
+        <div class="icon">
+          <%= image_tag 'icons/bell.svg', alt: ""%>
+        </div>
+        <div class="icon" id="nav-dialog">
+          <%= image_tag 'icons/arrow.svg', alt: ""%>
+          <%= render 'home/dialog'%>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--content-->
+  <div class="wrapper search-wrapper">
+    <div class="shortcuts search-shortcuts">
+      <div class="first-col">
+        <div class="menu-item">
+          <div class="user">
+            <div class="profile">
+              <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
+            </div>
+            <h4><%= current_user.nickname %></h4>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-row">
+            <div class="icon">
+              <%= image_tag 'icons/shield.svg', alt: ""%>
+            </div>
+            <h4>COVID-19 Infromation Center </h4>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-row">
+            <div class="icon">
+              <%= image_tag 'icons/colored-people.svg', alt: ""%>
+            </div>
+            <h4>Friends </h4>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-row">
+            <div class="icon">
+              <%= image_tag 'icons/colored-messenger.svg', alt: ""%>
+            </div>
+            <h4>Messenger </h4>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-row">
+            <div class="icon">
+              <%= image_tag 'icons/colored-flag.svg', alt: ""%>
+            </div>
+            <h4>Pages </h4>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-row  border">
+            <div class="icon more">
+              <%= image_tag 'icons/arrow-down.svg', alt: ""%>
+            </div>
+            <h4>see more </h4>
+          </div>
+        </div>
+      </div>
+      <div class="second-col">
+        <h6 class="title">
+          your shortcuts
+        </h6>
+        <div class="menu-item">
+          <div class="item-row">
+            <div class="icon">
+              <%= image_tag 'stories/st-1.jpeg', alt: ""%>
+            </div>
+            <h4>Designers house </h4>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-row">
+            <div class="icon">
+              <%= image_tag 'stories/st-2.jpeg', alt: ""%>
+            </div>
+            <h4>Script house </h4>
+          </div>
+          <div class="menu-item">
+            <div class="item-row">
+              <div class="icon">
+                <%= image_tag 'stories/page-1.jpg', alt: ""%>
+              </div>
+              <h4>ui ux Designers workshop </h4>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-row">
+              <div class="icon">
+                <%= image_tag 'stories/st-3.jpeg', alt: ""%>
+              </div>
+              <h4>netflix movies recommends </h4>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-row">
+              <div class="icon">
+                <%= image_tag 'stories/page-2.jpg', alt: ""%>
+              </div>
+              <h4>the future </h4>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-row">
+              <div class="icon">
+                <%= image_tag 'stories/page-3.jpeg', alt: ""%>
+              </div>
+              <h4> smart </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--posts-->
+    <div class="posts search-list">
+      <div class="timeline">
+        <div class="view view-post-container smaller-margin">
+          <div class="wrapper">
+            <div class="shortcuts shortcuts-2">
+              <div class="second-col">
+                <div class="online search-online">
+                  <h6 class="title search-title">
+                    People
+                  </h6>
+                  <% @search_user.each do |user| %>
+                    <div class="user search-user">
+                      <div class="profile">
+                        <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
+                      </div>
+                      <h4><%= user.nickname %>
+                      </h4>
+                      <% if current_user.friend_status(user.id) == "friend"%>
+                        <p>show</p>
+                      <% elsif current_user.friend_status(user.id) == "not followed" %>
+                        <%= link_to "Add friend", send_friend_request_path(:id => user.id), class: "friend-follow"%>
+                      <% else %>
+                         <p>is sending</p>
+                      <% end %>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  let navDiv;
+  let navMenu;
+
+  setTimeout(() => {
+    navDiv = document.getElementById("nav-dialog");
+    navMenu = document.getElementById("dialog-menu");
+    navDiv.onclick = () => {
+      if (navMenu.style.display !== "none") {
+        navMenu.style.display = "none";
+      } else {
+        navMenu.style.display = "block";
+      }
+    };
+  }, 1);
+</script>

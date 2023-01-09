@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :follows
   get "/search", to: "posts#search"
+  get "/send_friend_request", to: "users#send_friend_request"
   resources :posts
 
   devise_for :users

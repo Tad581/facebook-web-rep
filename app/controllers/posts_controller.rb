@@ -5,6 +5,11 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     @posts = Post.all
+    @nicknameList = []
+    @posts.each do |post|
+      nickname = User.find(post.user_id).nickname
+      @nicknameList << nickname
+    end
   end
 
   def search

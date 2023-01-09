@@ -148,7 +148,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
+  padding: 12px 20px 12px 0;
   top: 0;
   position: sticky;
   background-color: var(--accent);
@@ -332,9 +332,14 @@ nav .right-side .user-icons .icon.has-notification::after {
   justify-content: space-between;
   align-items: flex-start;
   height: auto;
-  padding: 20px 25px;
   flex-wrap: nowrap;
   width: 100%;
+}
+
+.wrapper .search-shortcuts {
+  background-color: var(--accent);
+  padding: 20px 100px 0 0;
+  border-right: 1px solid var(--border-bottom);
 }
 
 .wrapper .shortcuts {
@@ -405,7 +410,7 @@ nav .right-side .user-icons .icon.has-notification::after {
 /* strories and events */
 .posts {
   width: 50%;
-  padding: 0 30px;
+  padding: 30px;
   position: relative;
 }
 
@@ -1404,6 +1409,47 @@ Custom
 
 #error_explanation {
   color: red;
+}
+
+.search-wrapper {
+  justify-content: flex-start !important;
+}
+
+.search-list {
+  margin: 0 auto;
+}
+
+.search-online {
+  border: none !important;
+}
+
+.search-title {
+  font-size: 20px !important;
+}
+
+.search-list .view {
+  background-color: var(--accent);
+  padding: 0 !important;
+  border-radius: 10px;
+}
+
+.search-list .timeline .view .wrapper .shortcuts {
+  width: 100%;
+}
+
+.search-list .timeline .view .wrapper .shortcuts .second-col {
+  width: 100%;
+}
+
+.search-user {
+  /* width: 100%; */
+  padding: 0 0 20px;
+  border-bottom: 1px solid var(--lighter);
+}
+
+.friend-follow {
+  position: absolute;
+  inset: 5px 20px auto auto;
 }
 
 /*=======================
