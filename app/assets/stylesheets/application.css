@@ -338,7 +338,8 @@ nav .right-side .user-icons .icon.has-notification::after {
 
 .wrapper .search-shortcuts {
   background-color: var(--accent);
-  padding: 20px 100px 0 0;
+  padding-top: 20px;
+  padding-right: 100px;
   border-right: 1px solid var(--border-bottom);
 }
 
@@ -365,6 +366,9 @@ nav .right-side .user-icons .icon.has-notification::after {
 .wrapper .shortcuts .menu-item .item-row h4 {
   margin: 5px;
 }
+/* .wrapper .shortcuts .first-col, .wrapper .shortcuts .second-col {
+  padding-right: 100px;
+} */
 
 .wrapper .shortcuts .first-col .menu-item:last-of-type .item-row .icon {
   background-color: var(--lighter);
@@ -1415,8 +1419,18 @@ Custom
   justify-content: flex-start !important;
 }
 
+.search-icon {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  margin-right: 5px;
+}
+
 .search-list {
   margin: 0 auto;
+  padding: 30px 50px 40px 100px ;
 }
 
 .search-online {
@@ -1450,6 +1464,44 @@ Custom
 .friend-follow {
   position: absolute;
   inset: 5px 20px auto auto;
+  width: 36px;
+  height: 36px;
+  border: 50%;
+  background-color: var(--accent);
+}
+
+.friend-follow a {
+  color: transparent;
+  position: absolute;
+  font-size: 15px;
+  right: 10px;
+  top: 5px;
+}
+
+.friend-follow a:hover {
+  color: transparent !important;
+}
+
+.search-col {
+  width: calc( 100% + 90px );
+}
+
+.search-col h6 {
+  text-transform: none !important;
+  font-size: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-bottom);
+}
+
+.icon-second {
+  border-radius: 100px !important;
+  background-color: var(--lighter);
+}
+
+.icon-second img {
+  margin: auto;
+  width: 20px !important;
+  height: 20px !important;
 }
 
 /*=======================
