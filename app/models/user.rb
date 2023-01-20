@@ -16,6 +16,12 @@ class User < ApplicationRecord
     @not_following = @users - @following
   end
 
+  def friend_request_list
+    @wating_request = self.followers - self.followees
+    puts "watinggggg #{@wating_request}"
+    return @wating_request
+  end
+
   def friend_status(friend_id)
     begin
       self.followees.find(friend_id)

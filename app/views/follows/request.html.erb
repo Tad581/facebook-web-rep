@@ -1,0 +1,118 @@
+<div class="wrapper">
+  <div class="shortcuts shortcuts-2">
+    <div class="second-col">
+      <div class="online">
+        <h6 class="title">
+          contact
+        </h6>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="app-container">
+  <!--navbar-->
+  <!--content-->
+  <div class="wrapper search-wrapper">
+    <div class="shortcuts search-shortcuts">
+      <div class="second-col search-col">
+        <h6 class="title">
+          Search results
+        </h6>
+        <div class="menu-item">
+          <div class="item-row">
+            <div class="icon icon-second">
+              <%= image_tag 'posts/feed.png', alt: "" %>
+            </div>
+            <h4>All </h4>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-row">
+            <div class="icon icon-second">
+              <%= image_tag 'posts/post.png', alt: ""%>
+            </div>
+            <h4>Posts </h4>
+          </div>
+          <div class="menu-item">
+            <div class="item-row">
+              <div class="icon">
+                <%= image_tag 'stories/page-1.jpg', alt: ""%>
+              </div>
+              <h4>ui ux Designers workshop </h4>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-row">
+              <div class="icon">
+                <%= image_tag 'stories/st-3.jpeg', alt: ""%>
+              </div>
+              <h4>netflix movies recommends </h4>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-row">
+              <div class="icon">
+                <%= image_tag 'stories/page-2.jpg', alt: ""%>
+              </div>
+              <h4>the future </h4>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-row">
+              <div class="icon">
+                <%= image_tag 'stories/page-3.jpeg', alt: ""%>
+              </div>
+              <h4> smart </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--posts-->
+<div class="posts search-list">
+  <div class="timeline">
+    <div class="view view-post-container smaller-margin">
+      <div class="wrapper">
+        <div class="shortcuts shortcuts-2">
+          <div class="second-col">
+            <div class="online search-online">
+              <h6 class="title search-title">
+                People
+              </h6>
+              <% current_user.friend_request_list.each do |user| %>
+                <div class="user search-user">
+                  <div class="profile">
+                    <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
+                  </div>
+                  <h4><%= user.nickname %>
+                  </h4>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<script>
+  let navDiv;
+  let navMenu;
+
+  setTimeout(() => {
+    navDiv = document.getElementById("nav-dialog");
+    navMenu = document.getElementById("dialog-menu");
+    navDiv.onclick = () => {
+      if (navMenu.style.display !== "none") {
+        navMenu.style.display = "none";
+      } else {
+        navMenu.style.display = "block";
+      }
+    };
+  }, 1);
+</script>

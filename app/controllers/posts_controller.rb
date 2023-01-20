@@ -15,11 +15,10 @@ class PostsController < ApplicationController
   def search
     @parameters = params[:query].downcase
     if !@parameters.blank?
+      puts " userrrrrr #{current_user.id}"
       @search_user = User.all.where("id <> #{current_user.id} and lower(nickname) LIKE '%#{@parameters}%'")
-      @search_user.each do |user|
-      end
     else
-      @search_user = User.all
+      @search_user = User.all.where("id <> #{current_user.id}")
     end
   end
 
