@@ -22,63 +22,7 @@
   <!--navbar-->
   <%= render "home/navbar"%>
   <!--content-->
-  <div class="wrapper search-wrapper">
-    <div class="shortcuts search-shortcuts">
-      <div class="second-col search-col">
-        <h6 class="title">
-          Search results
-        </h6>
-        <div class="menu-item">
-          <div class="item-row">
-            <div class="icon icon-second">
-              <%= image_tag 'posts/feed.png', alt: "" %>
-            </div>
-            <h4>All </h4>
-          </div>
-        </div>
-        <div class="menu-item">
-          <div class="item-row">
-            <div class="icon icon-second">
-              <%= image_tag 'posts/post.png', alt: ""%>
-            </div>
-            <h4>Posts </h4>
-          </div>
-          <div class="menu-item">
-            <div class="item-row">
-              <div class="icon">
-                <%= image_tag 'stories/page-1.jpg', alt: ""%>
-              </div>
-              <h4>ui ux Designers workshop </h4>
-            </div>
-          </div>
-          <div class="menu-item">
-            <div class="item-row">
-              <div class="icon">
-                <%= image_tag 'stories/st-3.jpeg', alt: ""%>
-              </div>
-              <h4>netflix movies recommends </h4>
-            </div>
-          </div>
-          <div class="menu-item">
-            <div class="item-row">
-              <div class="icon">
-                <%= image_tag 'stories/page-2.jpg', alt: ""%>
-              </div>
-              <h4>the future </h4>
-            </div>
-          </div>
-          <div class="menu-item">
-            <div class="item-row">
-              <div class="icon">
-                <%= image_tag 'stories/page-3.jpeg', alt: ""%>
-              </div>
-              <h4> smart </h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <%= render "posts/sidebar"%>
 </div>
 </div>
 <!--posts-->
