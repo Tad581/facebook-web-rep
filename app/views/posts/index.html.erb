@@ -18,15 +18,12 @@
             <div class="icon">
               <%= image_tag 'icons/shield.svg', alt: ""%>
             </div>
-            <h4>COVID-19 Infromation Center </h4>
+            <h4>COVID-19 Information </h4>
           </div>
         </div>
         <div class="menu-item">
           <div class="item-row">
-            <div class="icon">
-              <%= image_tag 'icons/colored-people.svg', alt: ""%>
-            </div>
-            <h4>Friends </h4>
+            <%= link_to image_tag('icons/colored-people.svg', alt: "") + 'Friends', request_list_path%>
           </div>
         </div>
         <div class="menu-item">
@@ -357,19 +354,3 @@
     </div>
   </div>
 </div>
-<script>
-  let navDiv;
-  let navMenu;
-
-  setTimeout(() => {
-    navDiv = document.getElementById("nav-dialog");
-    navMenu = document.getElementById("dialog-menu");
-    navDiv.onclick = () => {
-      if (navMenu.style.display !== "none") {
-        navMenu.style.display = "none";
-      } else {
-        navMenu.style.display = "block";
-      }
-    };
-  }, 1);
-</script>

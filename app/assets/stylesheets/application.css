@@ -14,7 +14,7 @@
   --border: #5aa1ff;
   --border-bottom: #828282;
   --white: #fff;
-  --base-blue: #1877F2;
+  --base-blue: #1877f2;
 }
 
 body,
@@ -1507,6 +1507,11 @@ Custom
   height: 20px !important;
 }
 
+.search-wrapper .search-shortcuts {
+  min-height: 100vh;
+  padding-left: 0px !important;
+  min-width: 25vw;
+}
 
 .search-wrapper .search-shortcuts .menu-item {
   padding: 5px;
@@ -1518,12 +1523,29 @@ Custom
   border-radius: 10px;
 }
 
-.search-wrapper .search-shortcuts .search-col .active  .item-row  {
+.search-wrapper .search-shortcuts .search-col .active .item-row {
   margin-top: 0;
 }
 
-.search-wrapper .search-shortcuts .search-col .active  .item-row .icon-second {
+.search-wrapper .search-shortcuts .search-col .active .item-row .icon-second {
   background-color: var(--base-blue);
+}
+
+.wrapper .shortcuts .first-col .menu-item .item-row a {
+  display: flex;
+  width: 100%;
+  color: var(--white);
+  font-weight: 400;
+  font-size: 0.88rem;
+  text-transform: capitalize;
+}
+
+.wrapper .shortcuts .first-col .menu-item .item-row a img {
+  height: 28px;
+  width: 28px;
+  object-fit: contain;
+  margin-right: 18px;
+  margin-top: -3px;
 }
 
 /*=======================
@@ -1546,4 +1568,43 @@ Create Post
 .new-post .create-post-area .title {
   font-size: 50px;
   color: var(--white);
+}
+
+/*=======================
+Friend List
+========================*/
+.app-container .friend-list {
+  position: absolute;
+  right: 0;
+  top: 95px;
+  height: auto;
+  min-width: 60%;
+  margin: 30px 50px 0 20px;
+}
+
+.app-container .friend-list h4 {
+  color: var(--border-bottom);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.app-container .friend-list .detail-list {
+  margin-top: 20px;
+  height: auto;
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.app-container .friend-list .detail-list .profile {
+  width: 90%;
+  height: auto;
+  background-color: var(--accent);
+}
+
+.app-container .friend-list .detail-list .profile .avatar {
+  object-fit: cover;
+  width: 90%;
+  height: auto;
 }
