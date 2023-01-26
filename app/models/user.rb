@@ -18,7 +18,6 @@ class User < ApplicationRecord
 
   def friend_request_list
     @wating_request = self.followers - self.followees
-    puts "watinggggg #{@wating_request}"
     return @wating_request
   end
 
