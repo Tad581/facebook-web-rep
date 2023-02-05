@@ -289,66 +289,16 @@
           <h6 class="title">
             contact
           </h6>
-          <div class="user">
-            <div class="profile">
-              <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
-            </div>
-            <h4>diana berry</h4>
-          </div>
-          <div class="user">
-            <div class="profile">
-              <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
-            </div>
-            <h4>rosie pie</h4>
-          </div>
-          <div class="user">
-            <div class="profile">
-              <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
-            </div>
-            <h4>samantha jones</h4>
-          </div>
-          <div class="user">
-            <div class="profile">
-              <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
-            </div>
-            <h4>john doe</h4>
-          </div>
-          <div class="user">
-            <div class="profile">
-              <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
-            </div>
-            <h4>stacy jr.</h4>
-          </div>
-          <div class="user">
-            <div class="profile">
-              <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
-            </div>
-            <h4>christin sam</h4>
-          </div>
-          <div class="user">
-            <div class="profile">
-              <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
-            </div>
-            <h4>kate simon</h4>
-          </div>
-          <div class="user">
-            <div class="profile">
-              <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
-            </div>
-            <h4>diana berry</h4>
-          </div>
-          <div class="user">
-            <div class="profile">
-              <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
-            </div>
-            <h4>sarah cerny</h4>
-          </div>
-          <div class="user">
-            <div class="profile">
-              <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
-            </div>
-            <h4>josh doe</h4>
-          </div>
+          <% current_user.followees.each do |friend|%>
+            <% if friend.is_friend(current_user)%>
+              <div class="user">
+                <div class="profile">
+                  <%= image_tag 'avatar/unknown.jpeg', alt: ""%>
+                </div>
+                <h4><%= friend.nickname %></h4>
+              </div>
+            <% end %>
+          <% end %>
         </div>
       </div>
     </div>

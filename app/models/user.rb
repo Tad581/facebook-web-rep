@@ -30,6 +30,16 @@ class User < ApplicationRecord
     end
   end
 
+  def is_friend(current_user)
+    begin
+      if current_user.followees.find(self.id) && current_user.followers.find(self.id)
+        return true
+      end
+    rescue
+      return false
+    end
+  end
+
   private
 
   def check_is_friend(friend_id)
