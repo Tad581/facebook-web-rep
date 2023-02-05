@@ -143,7 +143,7 @@
         </div>
         <!--post container-->
         <% @posts.reverse.each do |post| %>
-          <% if  post.user == current_user || !current_user.followees.find(post.user_id).nil? && post.parent_id.nil? %>
+          <% if  post.user == current_user && post.parent_id.nil? || post.is_friend_post(current_user)%>
             <div class="view view-post-container smaller-margin">
               <div class="view-post">
                 <div class="upper">

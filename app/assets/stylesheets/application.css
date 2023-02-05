@@ -846,9 +846,8 @@ nav .right-side .user-icons .icon.has-notification::after {
   width: fit-content;
   height: fit-content;
   background-color: var(--lighter);
-  border-radius: 20px;
-  /* padding: 12px; */
-  padding-right: 20px;
+  border-radius: 15px;
+  padding: 5px 20px 5px 0;
   margin: 10px 0 0 10px;
   display: flex;
   flex-direction: column;
@@ -856,11 +855,13 @@ nav .right-side .user-icons .icon.has-notification::after {
   align-items: flex-start;
 }
 
+
 .posts .view .view-post .comment-list .comment-box .comment-content h4,
 .posts .view .view-post .comment-list .comment-box .comment-content p {
+  text-transform: capitalize;
   font-size: 15px;
   color: var(--white);
-  margin: 8px 0 0 20px;
+  margin: 0 0 0 15px;
 }
 
 .posts .view .view-post .write-comment .input input {

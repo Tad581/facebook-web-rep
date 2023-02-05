@@ -34,6 +34,7 @@
                   <% else %>
                     <div class="friend-follow">
                       <%= image_tag 'posts/delete_request.png', alt: "" %>
+                      <%= link_to "Delete", cancel_friend_request_path(:id => user.id)%>
                     </div>
                   <% end %>
                 </div>
